@@ -6,6 +6,9 @@ local vectors = {
 local vec2, vec3 = vectors.vec2, vectors.vec3
 vec2.__index, vec3.__index = vec2, vec3
 
+setmetatable(vec2, vec2.mt)
+setmetatable(vec3, vec3.mt)
+
 function vec2.new(i, j)
     local i, j = i, j
     if not (i and j) then i, j = 0, 0 end
@@ -13,6 +16,7 @@ function vec2.new(i, j)
     setmetatable(vec, vec2.mt)
     return vec
 end
+vec2.mt.__call = vec2.new
 
 function vec2:add(vec) return vec2.new(self.i + vec.i, self.j + vec.j) end
 vec2.mt.__add = vec2.add
@@ -51,6 +55,7 @@ function vec3.new(i, j, k)
     setmetatable(vec, vec3.mt)
     return vec
 end
+vec3.mt.__call = vec3.new
 
 function vec3:add(vec) return vec3.new(self.i + vec.i, self.j + vec.j, self.k + vec.k) end
 vec3.mt.__add = vec3.add
