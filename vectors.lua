@@ -41,7 +41,7 @@ vec2.mt.__unm = vec2.neg
 function vec2:norm() return self * (1 / #self) end
 vec2.mt.__bnot = vec2.norm
 
-function vec2:str() return tostring("<"..tostring(self.i)..", "..tostring(self.j)..">") end
+function vec2:str() return "<"..self.i..", "..self.j..">" end
 vec2.mt.__tostring = vec2.str
 
 function vec3.new(i, j, k)
@@ -81,7 +81,7 @@ vec3.mt.__unm = vec3.neg
 function vec3:norm() return self * (1 / #self) end
 vec3.mt.__bnot = vec3.norm
 
-function vec3:str() return tostring("<"..tostring(self.i)..", "..tostring(self.j)..", "..tostring(self.k)..">") end
+function vec3:str() return "<"..self.i..", "..self.j..", "..self.k..">" end
 vec3.mt.__tostring = vec3.str
 
 return vectors
