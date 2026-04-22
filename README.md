@@ -1,5 +1,5 @@
 # lua_vectors
-Adds basic 2D and 3D vectors and some operators.
+Adds basic 2D and 3D vectors and utilizes some operators to simplify code.
 
 To set up the module:
 ```lua
