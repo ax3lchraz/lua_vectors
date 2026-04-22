@@ -9,8 +9,8 @@ vec2, vec3 = vectors.vec2, vectors.vec3
 
 Vector Operations:
 ```lua
-local u = vec2.new(1, 0)
-local v = vec2.new(0, 1)
+local u = vec2(1, 0)
+local v = vec2(0, 1)
 
 print(tostring(u)) -- tostring converts table {i = n, j = m} to "<n, m>"
 
